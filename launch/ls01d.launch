@@ -1,0 +1,11 @@
+<launch>
+    <node name="talker" pkg="ls01d" type="ls01d">
+		<param name="serial_port" value="/dev/ttyUSB0"/>
+		<param name="scan_topic" value="scan"/>
+		<param name="laser_link" value="laser_link"/>
+    </node>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find ls01d)/rviz/ls01d.rviz" output="screen"/>
+
+
+</launch>
